@@ -1,0 +1,22 @@
+{
+  "formato": "HOG_CF_3.5_Refrescos",
+  "W_shelf": 55.0,
+  "w1": 0.757,
+  "w2": 1.543,
+  "w3": 0.7,
+  "E_util": 0.6093,
+  "E_incoh": 1.2425,
+  "E_block": 0.5634,
+  "std_util": 0.0,
+  "std_incoh": 0.0,
+  "std_block": 0.0,
+  "n_sim": 1000,
+  "validacion": {
+    "n_prod": 94,
+    "n_shelves": 23,
+    "ancho_med": 33.5,
+    "ancho_max": 52.2,
+    "charolas_sobre_W": 0,
+    "ok": true
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "formato": "PTC_CF_4.0_Refrescos",
+  "W_shelf": 55.0,
+  "w1": 2.622,
+  "w2": 0.227,
+  "w3": 0.15,
+  "E_util": 0.9072,
+  "E_incoh": 1.8132,
+  "E_block": 0.4172,
+  "std_util": 0.005,
+  "std_incoh": 0.1148,
+  "std_block": 0.0399,
+  "n_sim": 1000,
+  "validacion": {
+    "n_prod": 107,
+    "n_shelves": 24,
+    "ancho_med": 49.4,
+    "ancho_max": 58.3,
+    "charolas_sobre_W": 2,
+    "ok": true
+  }
+}

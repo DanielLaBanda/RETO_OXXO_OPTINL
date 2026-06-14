@@ -1,0 +1,9 @@
+# macOS
+.DS_Store
+
+# Dataset crudo grande (se sube aparte; ver discusion de almacenamiento)
+data/Ejemplo.csv
+
+# Python
+__pycache__/
+*.pyc

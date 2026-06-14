@@ -1,0 +1,22 @@
+{
+  "formato": "REC_CF_1.5_Refrescos",
+  "W_shelf": 55.0,
+  "w1": 1.064,
+  "w2": 1.505,
+  "w3": 0.431,
+  "E_util": 0.8459,
+  "E_incoh": 1.1974,
+  "E_block": 0.3429,
+  "std_util": 0.0,
+  "std_incoh": 0.0,
+  "std_block": 0.0,
+  "n_sim": 1000,
+  "validacion": {
+    "n_prod": 43,
+    "n_shelves": 8,
+    "ancho_med": 46.5,
+    "ancho_max": 51.9,
+    "charolas_sobre_W": 0,
+    "ok": true
+  }
+}

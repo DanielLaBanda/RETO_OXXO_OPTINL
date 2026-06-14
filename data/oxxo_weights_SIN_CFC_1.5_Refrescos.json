@@ -1,0 +1,22 @@
+{
+  "formato": "SIN_CFC_1.5_Refrescos",
+  "W_shelf": 55.0,
+  "w1": 2.417,
+  "w2": 0.328,
+  "w3": 0.255,
+  "E_util": 0.815,
+  "E_incoh": 1.0716,
+  "E_block": 0.5224,
+  "std_util": 0.0037,
+  "std_incoh": 0.0356,
+  "std_block": 0.0224,
+  "n_sim": 1000,
+  "validacion": {
+    "n_prod": 38,
+    "n_shelves": 8,
+    "ancho_med": 44.7,
+    "ancho_max": 53.8,
+    "charolas_sobre_W": 0,
+    "ok": true
+  }
+}

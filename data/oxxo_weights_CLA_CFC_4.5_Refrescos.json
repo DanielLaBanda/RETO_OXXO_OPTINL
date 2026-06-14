@@ -1,0 +1,22 @@
+{
+  "formato": "CLA_CFC_4.5_Refrescos",
+  "W_shelf": 55.0,
+  "w1": 0.666,
+  "w2": 1.705,
+  "w3": 0.629,
+  "E_util": 0.581,
+  "E_incoh": 1.4875,
+  "E_block": 0.5484,
+  "std_util": 0.0,
+  "std_incoh": 0.0,
+  "std_block": 0.0,
+  "n_sim": 1000,
+  "validacion": {
+    "n_prod": 84,
+    "n_shelves": 22,
+    "ancho_med": 32.0,
+    "ancho_max": 53.9,
+    "charolas_sobre_W": 0,
+    "ok": true
+  }
+}

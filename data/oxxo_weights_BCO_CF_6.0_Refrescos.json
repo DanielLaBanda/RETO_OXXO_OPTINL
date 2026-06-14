@@ -1,0 +1,22 @@
+{
+  "formato": "BCO_CF_6.0_Refrescos",
+  "W_shelf": 55.0,
+  "w1": 2.543,
+  "w2": 0.247,
+  "w3": 0.21,
+  "E_util": 0.6832,
+  "E_incoh": 1.5532,
+  "E_block": 0.4706,
+  "std_util": 0.0035,
+  "std_incoh": 0.081,
+  "std_block": 0.0289,
+  "n_sim": 1000,
+  "validacion": {
+    "n_prod": 156,
+    "n_shelves": 36,
+    "ancho_med": 37.3,
+    "ancho_max": 54.1,
+    "charolas_sobre_W": 0,
+    "ok": true
+  }
+}
