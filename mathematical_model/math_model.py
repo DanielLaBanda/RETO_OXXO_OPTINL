@@ -12,16 +12,16 @@ OUT_DIR.mkdir(parents=True, exist_ok=True)
 def latex_escape(value: object) -> str:
     text = str(value)
     replacements = {
-        '\\': r'\\textbackslash{}',
-        '&': r'\\&',
-        '%': r'\\%',
-        '$': r'\\$',
-        '#': r'\\#',
-        '_': r'\\_',
-        '{': r'\\{',
-        '}': r'\\}',
-        '~': r'\\textasciitilde{}',
-        '^': r'\\textasciicircum{}',
+        '\\': r'\textbackslash{}',
+        '&': r'\&',
+        '%': r'\%',
+        '$': r'\$',
+        '#': r'\#',
+        '_': r'\_',
+        '{': r'\{',
+        '}': r'\}',
+        '~': r'\textasciitilde{}',
+        '^': r'\textasciicircum{}',
     }
     for old, new in replacements.items():
         text = text.replace(old, new)
@@ -46,7 +46,7 @@ def write_latex_tables(results: list[dict[str, object]], sensitivity: list[dict[
         results_by_format.setdefault(str(row["formato"]), {})[str(row["algoritmo"])] = row
 
     lines = []
-    lines.append("% Archivo generado por optimization/nonlinear_compare.py")
+    lines.append("% Archivo generado por mathematical_model/nlp_model.py")
     lines.append("\\begin{table}[h]")
     lines.append("\\centering")
     lines.append("\\small")

@@ -22,7 +22,7 @@ rng = np.random.default_rng(42)
 # CONFIG
 # ----------------------------------------------------------------------
 USE_PIPELINE = True
-FORMATO      = 'BCO_CF_4.0_Refrescos'   # planograma; debe existir como artefacto del pipeline
+FORMATO      = os.environ.get('OXXO_FORMATO', 'BCO_CF_4.0_Refrescos')   # planograma (override por env OXXO_FORMATO)
 W_SHELF      = 55.0
 SEP          = 0.5
 
