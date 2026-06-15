@@ -144,7 +144,8 @@ contra el acomodo hist\'orico real de OXXO.
 % ======================================================================
 \subsection{Conjuntos, par\'ametros y variables}
 \textbf{Conjuntos:} $P=\{1,\dots,N\}$ bloques-producto a colocar; $S=\{1,\dots,M\}$
-charolas del mueble (con $M=6\cdot\text{TAMA\~NO}$); $B$ marcas.\\[0.2em]
+charolas del mueble (con $M=6\cdot\text{TAMA\~NO}$); $B$ marcas, con $b_j\in B$ la
+marca del producto $j$.\\[0.2em]
 \textbf{Par\'ametros:} $a_j=\text{ANCHO}_j\times\text{frentes}_j$ (ancho del bloque,
 cm), $h_j$ (alto, cm), $W=55$ cm (ancho \'util de charola en cuarto fr\'io),
 $\text{SEP}=0.5$ cm (separador entre productos), $w_1,w_2,w_3$ (pesos),
@@ -161,19 +162,42 @@ orden de colocaci\'on.
 \;-\; \rho\cdot\max\!\bigl(0,\; M_{\text{usadas}}-M\bigr)
 \label{eq:obj}
 \end{equation}
-donde $U$ es el aprovechamiento promedio de ancho de las charolas usadas,
-$C_{\text{tam}}$ la incoherencia de tama\~no (desviaci\'on est\'andar del alto dentro
-de cada charola; t\'ermino \textbf{no lineal} por involucrar varianzas) y
-$B_{\text{marca}}$ la fracci\'on de productos contiguos que comparten marca. La
-restricci\'on dura es la capacidad de ancho con separadores:
+donde cada criterio se define a continuaci\'on (sobre $S'$, el conjunto de charolas
+utilizadas, y $n_i$ el n\'umero de bloques en la charola $i$).
+
+\noindent\textbf{Aprovechamiento de espacio} ($U$): ocupaci\'on promedio del ancho
+de las charolas usadas (se desea alta):
+\begin{equation}
+U \;=\; \frac{1}{|S'|}\sum_{i\in S'}\frac{1}{W}\sum_{j\in P} a_j\,x_{ij}.
+\label{eq:util}
+\end{equation}
+
+\noindent\textbf{Incoherencia de tama\~no} ($C_{\text{tam}}$): promedio de la
+desviaci\'on est\'andar de la altura dentro de cada charola (se penaliza; es el
+t\'ermino \textbf{no lineal} por involucrar varianzas):
+\begin{equation}
+C_{\text{tam}} \;=\; \frac{1}{|S'|}\sum_{i\in S'}
+\sqrt{\frac{1}{n_i}\sum_{j\in P} x_{ij}\,(h_j-\bar h_i)^2},
+\qquad \bar h_i=\frac{1}{n_i}\sum_{j\in P} x_{ij}\,h_j.
+\label{eq:incoh}
+\end{equation}
+
+\noindent\textbf{Agrupaci\'on de marca} ($B_{\text{marca}}$): fracci\'on de pares de
+productos contiguos en la misma charola que comparten marca (se premia):
+\begin{equation}
+B_{\text{marca}} \;=\;
+\frac{\#\{\text{vecinos contiguos con } b_j=b_k\}}{\#\{\text{vecinos contiguos}\}}.
+\label{eq:marca}
+\end{equation}
+
+La restricci\'on dura es la capacidad de ancho con separadores:
 \begin{equation}
 \sum_{j\in P} a_j\, x_{ij} \;+\; \text{SEP}\,(n_i-1) \;\le\; W
 \qquad \forall\, i\in S,
 \label{eq:cap}
 \end{equation}
-con $n_i$ el n\'umero de bloques en la charola $i$. El modelo extendido (GA2) a\~nade
-un t\'ermino $+\,w_4\,L$ que premia colocar cada producto cerca de su charola
-esperada hist\'orica.
+El modelo extendido (GA2) a\~nade un t\'ermino $+\,w_4\,L$ que premia colocar cada
+producto cerca de su charola esperada hist\'orica.
 
 \subsection{M\'etodo heur\'istico: algoritmo gen\'etico}
 Cada individuo es una \textbf{permutaci\'on} de los $N$ bloques. Se decodifica con un
