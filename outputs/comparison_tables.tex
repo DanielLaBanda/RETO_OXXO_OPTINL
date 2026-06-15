@@ -1,0 +1,57 @@
+% Archivo generado por optimization/nonlinear_compare.py
+\begin{table}[h]
+\centering
+\small
+\renewcommand{\arraystretch}{1.18}
+\begin{tabular}{lrrrrr}
+\toprule
+\textbf{Formato} & \textbf{Nodos} & \textbf{Arcos} & \textbf{Var. NLP} & \textbf{Var. grafo} & \textbf{Params.} \\
+\midrule
+BCO\\_CF\\_4.0\\_Refrescos & 10 & 15 & 100 & 80 & 5 \\
+\bottomrule
+\end{tabular}
+\caption{Tamano del modelo no lineal random-key y su grafo equivalente por formato.}
+\end{table}
+
+\begin{table}[h]
+\centering
+\small
+\renewcommand{\arraystretch}{1.18}
+\begin{tabular}{llrrrrrr}
+\toprule
+\textbf{Formato} & \textbf{Algoritmo} & \textbf{Fitness} & \textbf{Aprov.\%} & \textbf{Desp.\%} & \textbf{Incoh.} & \textbf{Marca\%} & \textbf{E[ubic]} \\
+\midrule
+BCO\\_CF\\_4.0\\_Refrescos & GA main & 1.230 & 91.2 & 8.8 & 2.34 & 52.3 & 0.450 \\
+BCO\\_CF\\_4.0\\_Refrescos & NLP random-key & 1.250 & 92.0 & 8.0 & 2.20 & 53.0 & 0.470 \\
+\bottomrule
+\end{tabular}
+\caption{Comparacion del algoritmo genetico de la rama main contra el modelo no lineal random-key.}
+\end{table}
+
+\begin{table}[h]
+\centering
+\small
+\renewcommand{\arraystretch}{1.18}
+\begin{tabular}{lrrrr}
+\toprule
+\textbf{Formato} & \textbf{GA main} & \textbf{NLP} & \textbf{Dif.\% NLP vs GA} & \textbf{Tiempo NLP/GA} \\
+\midrule
+BCO\\_CF\\_4.0\\_Refrescos & 1.230 & 1.250 & 1.63 & NA \\
+\bottomrule
+\end{tabular}
+\caption{Diferencia porcentual entre el modelo no lineal y el algoritmo genetico.}
+\end{table}
+
+\begin{table}[h]
+\centering
+\small
+\renewcommand{\arraystretch}{1.18}
+\begin{tabular}{lrrrrr}
+\toprule
+\textbf{Escenario} & \textbf{Fitness} & \textbf{Aprov.\%} & \textbf{Desp.\%} & \textbf{Incoh.} & \textbf{Marca\%} \\
+\midrule
+base & 1.250 & 92.0 & 8.0 & 2.20 & 53.0 \\
+\bottomrule
+\end{tabular}
+\caption{Analisis de sensibilidad en BCO\_CF\_4.0\_Refrescos con el optimizador no lineal.}
+\end{table}
